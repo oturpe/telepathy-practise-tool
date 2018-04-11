@@ -51,7 +51,6 @@ void setLamp(bool light) {
     }
 }
 
-uint32_t indicatorCounter = 0;
 uint32_t lampCounter = 0;
 
 // If heartbeat has already been recorded
@@ -82,25 +81,24 @@ int main() {
         bool recording = recorder.Run();
 
         if (recording) {
+            // No lights during recording
             setIndicator(false);
-        }
-        else if (indicatorCounter >= beatLength/2) {
-            toggleIndicator();
-            indicatorCounter = 0;
-        }
-        else {
-            indicatorCounter++;
-        }
-
-        if (!recorded || recording) {
-            // No lamp before first recording or during recording
             setLamp(false);
         }
         else if (lampCounter < beatLength/LAMP_ON_DIVISOR) {
-            setLamp(true);
+            // Light on time
+            setIndicator(true);
+
+            // But no lamp before heartbeat has been recorded
+            if (recorded) {
+                setLamp(true);
+            }
+
             lampCounter++;
         }
         else if (lampCounter < beatLength) {
+            // Light off time
+            setIndicator(false);
             setLamp(false);
             lampCounter++;
         }
