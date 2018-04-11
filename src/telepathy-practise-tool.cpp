@@ -1,8 +1,8 @@
-// Add description here
+// Telepathy practise tool for Koelse Museum of Paranormal Technology
 //
-// Author: N.N.
-// Email: n.n@example.com
-// Date: 1900-01-01
+// Author: Otto Urpelainen
+// Email: oturpe@iki.fi
+// Date: 2018-04-10
 
 #include "AvrUtils.h"
 
