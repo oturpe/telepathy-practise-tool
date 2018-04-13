@@ -9,7 +9,10 @@ public:
     /// \param delay
     ///    How long this recorder waits for next beat until it decides that
     ///    the recording run has concluded.
-    BeatRecorder(uint16_t delay);
+    ///
+    /// \param debouncePeriod
+    ///    Length of switch debounce period
+    BeatRecorder(uint16_t delay, uint16_t debouncePeriod);
 
 public:
     /// \brief
@@ -29,12 +32,24 @@ public:
 
     /// \brief
     ///    Calculated mean beat length
-    uint16_t GetRate();
+    uint16_t GetRate() const;
+
+private:
+    /// \brief
+    ///    If current time is so close to last recording event that any new
+    ///    signals should be interpreted as button bounce.
+    ///
+    /// \return
+    ///    If current time is within bounce period
+    bool IsWithinBouncePeriod() const;
 
 private:
     // How long this recorder waits for next beat until it decides that
     // the recording run has concluded.
-    uint16_t delay;
+    const uint16_t delay;
+
+    // Length of switch debounce period.
+    const uint16_t debouncePeriod;
 
     // How many beats have been recorded during current recording run
     uint16_t beatsRecorded;

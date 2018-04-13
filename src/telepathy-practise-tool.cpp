@@ -56,7 +56,7 @@ uint32_t lampCounter = 0;
 // If heartbeat has already been recorded
 bool recorded = false;
 
-BeatRecorder recorder(BEAT_COUNTER_DELAY);
+BeatRecorder recorder(BEAT_COUNTER_DELAY, BEAT_COUNTER_DEBOUNCE);
 uint8_t beatLength = 50;
 
 ISR(INT0_vect) {

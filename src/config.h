@@ -22,6 +22,9 @@
 // units of LOOP_DELAY
 #define BEAT_COUNTER_DELAY 200
 
+// Length of heartbeat counter debounce period. Given in units of LOOP_DELAY.
+#define BEAT_COUNTER_DEBOUNCE 3
+
 // Definition of lamp driver pin data direction and data ports and pins
 #define LAMP_DATA_DIR DDRD
 #define LAMP_DATA_DIR_PIN DDD3
