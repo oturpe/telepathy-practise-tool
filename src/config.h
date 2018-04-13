@@ -20,7 +20,7 @@
 // How long heartbeat counter waits for the next record before it concludes
 // that the recording session has ended and waits for the next one. Given in
 // units of LOOP_DELAY
-#define BEAT_COUNTER_DELAY 200
+#define BEAT_COUNTER_DELAY 300
 
 // Length of heartbeat counter debounce period. Given in units of LOOP_DELAY.
 #define BEAT_COUNTER_DEBOUNCE 3
