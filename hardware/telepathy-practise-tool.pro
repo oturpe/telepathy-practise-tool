@@ -1,4 +1,4 @@
-update=sob 07 apr 2018 15:52:33 EEST
+update=pon 10 sep 2018 21:31:19 EEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,5 +59,5 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=/home/otto/src/Elektroniikka/Omat/oturpe-kicad-lib/oturpe-kicad-lib
-LibName31=/home/otto/Elektroniikka/KiCad/library/SnapEda/G3MB-202P
-LibName32=/home/otto/Elektroniikka/KiCad/library/kicad-library/library/switches
+LibName31=/home/otto/Elektroniikka/KiCad/library/kicad-library/library/switches
+LibName32=/home/otto/Tekniikka/Elektroniikka/KiCad/library/SnapEda/G3MB-202P
